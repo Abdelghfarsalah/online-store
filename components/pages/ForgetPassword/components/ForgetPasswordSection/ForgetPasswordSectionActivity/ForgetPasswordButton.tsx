@@ -1,7 +1,7 @@
 "use client"
 import { Button } from "@/components/ui/button"
 
-export function RegisterButton({onClick}:{onClick:()=>void}) {
+export function ForgetPasswordButton({onClick}:{onClick:()=>void}) {
   return <Button onClick={onClick} style={{
     backgroundColor:"#1C4532",
     width:"100%",
@@ -11,5 +11,5 @@ export function RegisterButton({onClick}:{onClick:()=>void}) {
     color:"white",
     borderRadius:"10px",
     fontWeight:"bold"
-  }}>Sign Up</Button>
+  }}>Reset</Button>
 }

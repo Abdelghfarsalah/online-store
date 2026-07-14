@@ -20,6 +20,8 @@ export default function CustomLoginForm() {
             onChange={(value) => setFormValues({...formValue, password: value})}
             title="Password" />
             <ForgetPassword></ForgetPassword>
-        <LoginButton onClick={()=>{}}></LoginButton>
+        <LoginButton onClick={()=>{
+            console.log(formValue)
+        }}></LoginButton>
     </form>
 }

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ButtonLink } from "./button";
 
 export default function ForgetPassword() {
@@ -11,8 +10,6 @@ export default function ForgetPassword() {
             color:"#718096",
             fontSize:"16PX",
         }}> Remember me</p>
-        <Link href="/ForgetPassword">
         <ButtonLink  onclick={() => console.log("Forget password clicked")} text="Forget Password" />
-        </Link>
     </div>
 }
