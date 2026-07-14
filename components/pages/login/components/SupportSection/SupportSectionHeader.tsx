@@ -34,7 +34,7 @@ export default function SupportSectionHeader(){
   height={500}
   style={{
     width: "70%",
-    height: "60vh",
+    height: "80vh",
   }}
 />
     </div>
