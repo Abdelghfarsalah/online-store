@@ -1,4 +1,4 @@
-import LoginSection from "@/components/pages/login/components/LoginSection";
+import LoginSection from "@/components/pages/login/components/LoginSection/index";
 import SupportSection from "@/components/pages/login/components/SupportSection";
 import "@/components/pages/login/styles/loginStyle.css";
 export default function Login() {
