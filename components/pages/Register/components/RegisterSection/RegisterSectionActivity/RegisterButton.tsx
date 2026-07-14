@@ -11,5 +11,5 @@ export function LoginButton({onClick}:{onClick:()=>void}) {
     color:"white",
     borderRadius:"10px",
     fontWeight:"bold"
-  }}>Sign in</Button>
+  }}>Sign Up</Button>
 }
