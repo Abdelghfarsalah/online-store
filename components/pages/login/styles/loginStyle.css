@@ -1,0 +1,16 @@
+.login-Page{
+    display: flex;
+
+}
+
+.login-section{
+    width: 50%;
+    height: 100vh;
+    background-color: red;
+}
+
+.support-section{
+    width: 50%;
+    height: 100vh;
+    background-color: green;
+}
