@@ -28,7 +28,7 @@ export default function SupportSectionHeader(){
         
        
        <Image
-  src="/assets/images/main-right.png"
+  src="/assets/images/ChatGPT Image 15 يوليو 2026، 11_42_03 ص.png"
   alt="icon"
   width={500}
   height={500}

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import SettingBar from "@/components/shared/SettingBar";
+import MousePointer from "@/components/shared/MousePointer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <ReduxProvider>
+          <MousePointer></MousePointer>
           <SettingButton></SettingButton>
           <SettingBar></SettingBar>
           {children}

@@ -1,6 +1,5 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { PrimaryColor } from "@/constant/Colors"
 import { SeetingBarType } from "@/types/redux";
 import { useSelector } from "react-redux";
 
