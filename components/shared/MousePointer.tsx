@@ -1,10 +1,12 @@
 "use client"
 import { motion } from "framer-motion";
+import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
 export default function MousePointer(){
-    const [x,setX]=useState(-40);
-    const [y,setY]=useState(-40);
+    const locale = useLocale();
+    const [x,setX]=useState(0);
+    const [y,setY]=useState(0);
 
     useEffect(()=>{
         const handleMouseMove=(e:MouseEvent)=>{
@@ -17,8 +19,13 @@ export default function MousePointer(){
     };
     },[]);
 
-    return <motion.div  animate={{x,y,}} style={{
-        position:"absolute",
+    return <motion.div  
+        animate={{x,y}} 
+        transition={{type: "spring", stiffness: 500, damping: 28}}
+        style={{
+        position:"fixed",
+        top:0,
+        left:0,
         zIndex:2000,
         pointerEvents:"none",
         width:"40px",
