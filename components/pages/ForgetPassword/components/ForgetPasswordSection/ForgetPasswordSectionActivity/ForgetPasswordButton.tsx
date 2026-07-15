@@ -1,9 +1,14 @@
 "use client"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
+import { SeetingBarType } from "@/types/redux";
+import { useSelector } from "react-redux";
 
 export function ForgetPasswordButton({onClick}:{onClick:()=>void}) {
+      const state = useSelector(
+            (state: SeetingBarType) => state.SeetingBar.PrimaryColor
+        );
   return <Button onClick={onClick} style={{
-    backgroundColor:"#1C4532",
+    backgroundColor:state,
     width:"100%",
     height:"60px",
     marginTop:"20px",

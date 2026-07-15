@@ -10,9 +10,7 @@ export default function SupportSectionHeader(){
         alignItems:"center",
         marginBottom:"20px"
     }}>
-       
-      
-         <p style={{
+        <p style={{
             color:"#171923",
             fontSize:"18px",
             fontFamily:"intr",
