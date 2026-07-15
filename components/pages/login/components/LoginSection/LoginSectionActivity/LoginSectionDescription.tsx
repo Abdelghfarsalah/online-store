@@ -11,7 +11,7 @@ export default function LoginSectionDescription() {
             fontWeight:"bold",
             fontSize:"48px",
             fontFamily:"intr",
-        }}>Sign in </p>
+        }}> {t("title")}</p>
         <div style={{
         display:"flex",
     }}>   
