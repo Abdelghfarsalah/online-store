@@ -1,6 +1,6 @@
 "use client"
 import { Button } from "@/components/ui/button"
-import { buttontextType } from "@/types/login"
+import { buttontextType } from "@/types/Auth"
 
 export function ButtonLink({text,onclick}:buttontextType) {
   return <Button variant="link"><p style={{

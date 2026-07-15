@@ -1,4 +1,4 @@
-import { inputFieldType } from "@/types/login";
+import { inputFieldType } from "@/types/Auth";
 
 export default function CustomTextFormField({title,value,onChange,type,placeholder}:inputFieldType ) {
     return <div style={{

@@ -1,5 +1,5 @@
 "use client"
-import { inputFieldType } from "@/types/login";
+import { inputFieldType } from "@/types/Auth";
 import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
