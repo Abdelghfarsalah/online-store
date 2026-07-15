@@ -1,12 +1,12 @@
 "use client"
-
 import { colors } from "@/constant/Colors";
 import { ChangeColor, hideSettingBar } from "@/redux/app/features/SettingButton/SettingButtonSlice";
 import { SeetingBarType } from "@/types/redux";
 import { IoClose } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
-
+import ChangeLangaugeButton from "./ChangeLanguageButton";
 export default function SettingBar() {
+
     const state = useSelector(
         (state: SeetingBarType) => state.SeetingBar.Show
     );
@@ -97,6 +97,7 @@ export default function SettingBar() {
             />
             ))}
         </div>
-        </div>
+        <ChangeLangaugeButton></ChangeLangaugeButton>
+    </div>
     );
 }
