@@ -1,7 +1,9 @@
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { ButtonLink } from "./button";
 
 export default function ForgetPassword() {
+    const t = useTranslations('Login');
     return <div className="forget-password" style={{
         display:"flex",
         justifyContent:"space-between",
@@ -10,9 +12,9 @@ export default function ForgetPassword() {
         <p style={{
             color:"#718096",
             fontSize:"16PX",
-        }}> Remember me</p>
+        }}> {t('rememberMe')}</p>
         <Link href="/ForgetPassword">
-        <ButtonLink  onclick={() => console.log("Forget password clicked")} text="Forget Password" />
+        <ButtonLink  onclick={() => console.log("Forget password clicked")} text={t('forgetPassword')} />
         </Link>
     </div>
 }

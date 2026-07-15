@@ -1,8 +1,10 @@
 "use client"
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { ButtonLink } from "./button";
 
 export default function LoginSectionDescription() {
+    const t = useTranslations('Login');
     return <div > 
         <p style={{
             color:"#171923",
@@ -16,10 +18,10 @@ export default function LoginSectionDescription() {
             <p style={{
             color:"#718096",
             fontSize:"18PX",
-        }}>Don’t have an account?</p>
+        }}>{t('dontHaveAccount')}</p>
         <Link href="/Register">
                 
-                <ButtonLink onclick={() => console.log("Create now clicked")} text="Create now"/>
+                <ButtonLink onclick={() => console.log("Create now clicked")} text={t('createNow')}/>
                 </Link>
         
         </div>

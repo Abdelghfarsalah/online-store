@@ -1,9 +1,11 @@
 "use client"
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { ForgetPasswordButton } from "./ForgetPasswordButton";
 import PasswordFormField from "./PasswordInput";
 
 export default function CustomForgetPasswordForm() {
+    const t = useTranslations('ForgetPassword');
     const [formValue,setFormValues]=useState({
 
         password:"",
@@ -15,12 +17,12 @@ export default function CustomForgetPasswordForm() {
         marginTop:"30PX"
     }}>
        
-        <PasswordFormField  placeholder={"123456"} value={formValue.password}
+        <PasswordFormField  placeholder={t('passwordPlaceholder')} value={formValue.password}
             onChange={(value) => setFormValues({...formValue, password: value})}
-            title="Curretn Password" /> 
-             <PasswordFormField  placeholder={"123456"} value={formValue.newPassword}
+            title={t('currentPassword')} /> 
+             <PasswordFormField  placeholder={t('newPasswordPlaceholder')} value={formValue.newPassword}
             onChange={(value) => setFormValues({...formValue, newPassword: value})}
-            title="New Password" />
+            title={t('newPassword')} />
         <ForgetPasswordButton onClick={()=>{
             console.log(formValue)
         }}></ForgetPasswordButton>

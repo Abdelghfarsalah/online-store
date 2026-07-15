@@ -1,4 +1,5 @@
 "use client"
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 import CustomTextFormField from "./CustomTextForm";
 import ForgetPassword from "./ForgetPassword";
@@ -6,6 +7,7 @@ import PasswordFormField from "./PasswordInput";
 import { LoginButton } from "./loginButton";
 
 export default function CustomLoginForm() {
+    const t = useTranslations('Login');
     const [formValue,setFormValues]=useState({
         email:"",
         password:""
@@ -15,10 +17,10 @@ export default function CustomLoginForm() {
     }} style={{
         marginTop:"30PX"
     }}>
-        <CustomTextFormField placeholder={"Exmaple@gmail.com"} type="email" value={formValue.email} onChange={(value) => setFormValues({...formValue, email: value})} title="E-mail" />
-        <PasswordFormField placeholder={"123456"} value={formValue.password}
+        <CustomTextFormField placeholder={t('emailPlaceholder')} type="email" value={formValue.email} onChange={(value) => setFormValues({...formValue, email: value})} title={t('email')} />
+        <PasswordFormField placeholder={t('passwordPlaceholder')} value={formValue.password}
             onChange={(value) => setFormValues({...formValue, password: value})}
-            title="Password" />
+            title={t('password')} />
             <ForgetPassword></ForgetPassword>
         <LoginButton onClick={()=>{
             console.log(formValue)

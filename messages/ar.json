@@ -1,0 +1,54 @@
+{
+  "HomePage": {
+    "title": "مرحبا بالعالم!"
+  },
+  "Login": {
+    "title": "تسجيل الدخول",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "مثال@gmail.com",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "123456",
+    "rememberMe": "تذكرني",
+    "forgetPassword": "نسيت كلمة المرور",
+    "signInButton": "تسجيل الدخول",
+    "dontHaveAccount": "ليس لديك حساب؟",
+    "createNow": "أنشئ واحدة الآن",
+    "continueWithGoogle": "المتابعة مع جوجل",
+    "continueWithFacebook": "المتابعة مع فيسبوك",
+    "or": "أو"
+  },
+  "Register": {
+    "title": "إنشاء حساب",
+    "fullname": "الاسم الكامل",
+    "fullnamePlaceholder": "عبدالغفار صلاح",
+    "email": "البريد الإلكتروني",
+    "emailPlaceholder": "مثال@gmail.com",
+    "password": "كلمة المرور",
+    "passwordPlaceholder": "123456",
+    "signUpButton": "إنشاء حساب",
+    "haveAccount": "هل لديك حساب بالفعل؟",
+    "logIn": "تسجيل الدخول",
+    "continueWithGoogle": "المتابعة مع جوجل",
+    "continueWithFacebook": "المتابعة مع فيسبوك",
+    "or": "أو"
+  },
+  "ForgetPassword": {
+    "title": "نسيت كلمة المرور",
+    "description": "أعد تعيين كلمة المرور الآن.",
+    "currentPassword": "كلمة المرور الحالية",
+    "passwordPlaceholder": "123456",
+    "newPassword": "كلمة المرور الجديدة",
+    "newPasswordPlaceholder": "123456",
+    "resetButton": "إعادة تعيين",
+    "logIn": "تسجيل الدخول",
+    "or": "أو"
+  },
+  "Common": {
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "fullname": "الاسم الكامل",
+    "rememberMe": "تذكرني",
+    "continueWithGoogle": "المتابعة مع جوجل",
+    "continueWithFacebook": "المتابعة مع فيسبوك"
+  }
+}

@@ -1,26 +1,28 @@
 "use client"
 
-import Link from "next/link"
-import { ButtonLink } from "./button"
+import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { ButtonLink } from "./button";
 
 export default function ForgetPasswordSectionDescription() {
+    const t = useTranslations('ForgetPassword');
     return <div > 
         <p style={{
             color:"#171923",
             fontWeight:"bold",
             fontSize:"30px",
             fontFamily:"intr",
-        }}>Forget Password </p>
+        }}>{t('title')} </p>
         <div style={{
         display:"flex",
     }}>   
             <p style={{
             color:"#718096",
             fontSize:"18PX",
-        }}>Reset Your Password Now.</p>
+        }}>{t('description')}</p>
         <Link href="/login">
         
-        <ButtonLink onclick={() => console.log("Create now clicked")} text="LOG IN "/>
+        <ButtonLink onclick={() => console.log("Create now clicked")} text={t('logIn')} />
         </Link>
         </div>
     </div>

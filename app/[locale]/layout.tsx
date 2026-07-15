@@ -1,11 +1,12 @@
 import ReduxProvider from "@/components/providers/ReduxProvider";
+import MousePointer from "@/components/shared/MousePointer";
+import SettingBar from "@/components/shared/SettingBar";
 import SettingButton from "@/components/shared/SettingButton";
 import type { Metadata } from "next";
+import { NextIntlClientProvider } from 'next-intl';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import SettingBar from "@/components/shared/SettingBar";
-import MousePointer from "@/components/shared/MousePointer";
-
+ 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,14 +31,18 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      
     >
-      <body className="min-h-full flex flex-col">
-        <ReduxProvider>
+      <body className="min-h-full flex flex-col" style={{
+        // direction:"rtl"
+      }}>
+        <NextIntlClientProvider> <ReduxProvider>
           <MousePointer></MousePointer>
           <SettingButton></SettingButton>
           <SettingBar></SettingBar>
           {children}
-        </ReduxProvider>
+        </ReduxProvider></NextIntlClientProvider>
+       
           
         </body>
     </html>

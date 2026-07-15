@@ -1,9 +1,11 @@
 "use client"
 import { Button } from "@/components/ui/button";
 import { SeetingBarType } from "@/types/redux";
+import { useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 
 export function ForgetPasswordButton({onClick}:{onClick:()=>void}) {
+      const t = useTranslations('ForgetPassword');
       const state = useSelector(
             (state: SeetingBarType) => state.SeetingBar.PrimaryColor
         );
@@ -16,5 +18,5 @@ export function ForgetPasswordButton({onClick}:{onClick:()=>void}) {
     color:"white",
     borderRadius:"10px",
     fontWeight:"bold"
-  }}>Reset</Button>
+  }}>{t('resetButton')}</Button>
 }

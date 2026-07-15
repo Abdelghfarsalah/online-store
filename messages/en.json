@@ -1,0 +1,54 @@
+{
+  "HomePage": {
+    "title": "Hello world!"
+  },
+  "Login": {
+    "title": "Sign in",
+    "email": "E-mail",
+    "emailPlaceholder": "Example@gmail.com",
+    "password": "Password",
+    "passwordPlaceholder": "123456",
+    "rememberMe": "Remember me",
+    "forgetPassword": "Forget Password",
+    "signInButton": "Sign in",
+    "dontHaveAccount": "Don't have an account?",
+    "createNow": "Create now",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithFacebook": "Continue with Facebook",
+    "or": "or"
+  },
+  "Register": {
+    "title": "Sign Up",
+    "fullname": "Fullname",
+    "fullnamePlaceholder": "Abdelghfar salah",
+    "email": "E-mail",
+    "emailPlaceholder": "Example@gmail.com",
+    "password": "Password",
+    "passwordPlaceholder": "123456",
+    "signUpButton": "Sign Up",
+    "haveAccount": "Do you have an account?",
+    "logIn": "LOG IN",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithFacebook": "Continue with Facebook",
+    "or": "or"
+  },
+  "ForgetPassword": {
+    "title": "Forget Password",
+    "description": "Reset Your Password Now.",
+    "currentPassword": "Current Password",
+    "passwordPlaceholder": "123456",
+    "newPassword": "New Password",
+    "newPasswordPlaceholder": "123456",
+    "resetButton": "Reset",
+    "logIn": "LOG IN",
+    "or": "or"
+  },
+  "Common": {
+    "email": "E-mail",
+    "password": "Password",
+    "fullname": "Fullname",
+    "rememberMe": "Remember me",
+    "continueWithGoogle": "Continue with Google",
+    "continueWithFacebook": "Continue with Facebook"
+  }
+}
