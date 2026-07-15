@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { useLocale } from "next-intl";
 import { CiSettings } from "react-icons/ci";
 import { useDispatch, useSelector } from "react-redux";
-
 export default function SettingButton(){
     const locale=useLocale()
     const state=useSelector((state:SeetingBarType)=>state.SeetingBar.Show);
@@ -23,12 +22,12 @@ export default function SettingButton(){
         zIndex: 9999,
     }} >
         <motion.div transition={{
-        duration:2,repeat: Infinity,
+        duration:5,repeat: Infinity,
         type: "tween",                                                                                                                                                                                                                                                                                                                 
     }} animate={{
         rotate:360,
     }}>
-        <CiSettings size={40} color="yellow" />
+        <CiSettings size={40} color="GREY" />
         </motion.div></button>
     </div>
 }
