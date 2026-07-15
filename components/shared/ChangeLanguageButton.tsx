@@ -16,6 +16,7 @@ export default function ChangeLangaugeButton(){
     return <div
     style={{
         marginTop: "35px",
+    direction:"ltr",
     }}
     >
     <h3

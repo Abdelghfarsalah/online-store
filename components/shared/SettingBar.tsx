@@ -2,11 +2,12 @@
 import { colors } from "@/constant/Colors";
 import { ChangeColor, hideSettingBar } from "@/redux/app/features/SettingButton/SettingButtonSlice";
 import { SeetingBarType } from "@/types/redux";
+import { useLocale } from "next-intl";
 import { IoClose } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import ChangeLangaugeButton from "./ChangeLanguageButton";
 export default function SettingBar() {
-
+ const locale=useLocale()
     const state = useSelector(
         (state: SeetingBarType) => state.SeetingBar.Show
     );
@@ -18,7 +19,8 @@ export default function SettingBar() {
         style={{
             position: "fixed",
             top: 0,
-            right: 0,
+            right:locale=="en"? 0:"",
+            left:locale=="ar"? 0:"",
             width: "320px",
             height: "100vh",
             background: "#fff",

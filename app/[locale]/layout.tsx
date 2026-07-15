@@ -1,10 +1,9 @@
 import ReduxProvider from "@/components/providers/ReduxProvider";
-import MousePointer from "@/components/shared/MousePointer";
-import SettingBar from "@/components/shared/SettingBar";
-import SettingButton from "@/components/shared/SettingButton";
+
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
 import { Geist, Geist_Mono } from "next/font/google";
+import AppContent from "./AppContent";
 import "./globals.css";
  
 const geistSans = Geist({
@@ -33,14 +32,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       
     >
-      <body className="min-h-full flex flex-col" style={{
-        // direction:"rtl"
-      }}>
+      <body className="min-h-full flex flex-col" >
         <NextIntlClientProvider> <ReduxProvider>
-          <MousePointer></MousePointer>
+          {/* <MousePointer></MousePointer>
           <SettingButton></SettingButton>
           <SettingBar></SettingBar>
-          {children}
+          {children} */}
+          <AppContent>{children} </AppContent>
         </ReduxProvider></NextIntlClientProvider>
        
           
