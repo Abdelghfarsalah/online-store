@@ -1,12 +1,10 @@
 "use client"
 import { motion } from "framer-motion";
-import { useLocale } from "next-intl";
 import { useEffect, useState } from "react";
 
 export default function MousePointer(){
-    const locale = useLocale();
-    const [x,setX]=useState(0);
-    const [y,setY]=useState(0);
+    const [x,setX]=useState(-50);
+    const [y,setY]=useState(-50);
 
     useEffect(()=>{
         const handleMouseMove=(e:MouseEvent)=>{

@@ -1,6 +1,17 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Hello world!",
+    "mobilesSectionTitle": "Featured Mobiles",
+    "seeAllButton": "See All",
+    "productTagLabel": "Model",
+    "buyNowButton": "Buy Now",
+    "allMobilesTitle": "All Mobiles",
+    "backButton": "Back",
+    "noProductsMessage": "No mobiles available at the moment.",
+    "noBooksMessage": "No books available at the moment.",
+    "productTagFallback": "Mobile",
+    "booksSectionTitle": "Featured Books",
+    "allBooksTitle": "All Books"
   },
   "Login": {
     "title": "Sign in",
@@ -50,5 +61,16 @@
     "rememberMe": "Remember me",
     "continueWithGoogle": "Continue with Google",
     "continueWithFacebook": "Continue with Facebook"
+  },
+  "Header": {
+    "brandName": "Furniro",
+    "home": "Home",
+    "shop": "Shop",
+    "about": "About",
+    "contact": "Contact",
+    "userProfile": "User Profile",
+    "search": "Search",
+    "wishlist": "Wishlist",
+    "cart": "Shopping Cart"
   }
 }

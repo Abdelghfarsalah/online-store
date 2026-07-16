@@ -1,7 +1,6 @@
 "use client"
-import { Button } from "@/components/ui/button"
-import { PrimaryColor } from "@/constant/Colors"
-import { buttontextType } from "@/types/Auth"
+import { Button } from "@/components/ui/button";
+import { buttontextType } from "@/types/Auth";
 import { SeetingBarType } from "@/types/redux";
 import { useSelector } from "react-redux";
 

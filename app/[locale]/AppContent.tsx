@@ -12,9 +12,10 @@ export default function AppContent({
   return <div style={{
     direction:locale=="ar"? "rtl":"ltr",
   }}>
-    <MousePointer></MousePointer>
-              <SettingButton></SettingButton>
-              <SettingBar></SettingBar>
-              {children}
+    <MousePointer>
+    </MousePointer>
+    <SettingButton></SettingButton>
+    <SettingBar></SettingBar>
+    {children}
   </div>
 }

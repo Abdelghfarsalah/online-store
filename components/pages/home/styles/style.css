@@ -1,0 +1,17 @@
+.home-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+
+.header-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

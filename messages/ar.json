@@ -1,6 +1,17 @@
 {
   "HomePage": {
-    "title": "مرحبا بالعالم!"
+    "title": "مرحبا بالعالم!",
+    "mobilesSectionTitle": "الهواتف المميزة",
+    "seeAllButton": "عرض الكل",
+    "productTagLabel": "الموديل",
+    "buyNowButton": "اشتري الآن",
+    "allMobilesTitle": "جميع الهواتف",
+    "backButton": "عودة",
+    "noProductsMessage": "لا توجد هواتف متاحة حالياً.",
+    "noBooksMessage": "لا توجد كتب متاحة حالياً.",
+    "productTagFallback": "هاتف",
+    "booksSectionTitle": "الكتب المميزة",
+    "allBooksTitle": "جميع الكتب"
   },
   "Login": {
     "title": "تسجيل الدخول",
@@ -50,5 +61,16 @@
     "rememberMe": "تذكرني",
     "continueWithGoogle": "المتابعة مع جوجل",
     "continueWithFacebook": "المتابعة مع فيسبوك"
+  },
+  "Header": {
+    "brandName": "فرنيرو",
+    "home": "الرئيسية",
+    "shop": "المتجر",
+    "about": "حول",
+    "contact": "اتصل بنا",
+    "userProfile": "الملف الشخصي",
+    "search": "بحث",
+    "wishlist": "قائمة المفضلة",
+    "cart": "سلة التسوق"
   }
 }
