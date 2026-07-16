@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function ProductCollectionCard({
   title,
@@ -17,6 +18,7 @@ export default function ProductCollectionCard({
   const locale = useLocale?.() ?? "en";
   const preview: Mobiles[] = Array.isArray(products) ? products : [];
   const { PrimaryColor } = usePrimaryColor();
+  const [selectedProduct, setSelectedProduct] = useState<Mobiles | null>(null);
   return (
     <div
       style={{
@@ -50,7 +52,7 @@ export default function ProductCollectionCard({
           const labelText = tagLabel ?? t("productTagLabel");
 
           return (
-            <div key={keyValue} className="productCard">
+            <div key={keyValue} className="productCard" onClick={() => setSelectedProduct(product)}>
               <div className="productImage">
                 <Image
                   src={imageSrc}
@@ -65,19 +67,61 @@ export default function ProductCollectionCard({
                 <div className="cardHeader">
                   <div>
                     <div className="productLabel">{labelText}</div>
-                    <div className="productTitle">{titleText}</div>
+                    <div style={{
+                      height: "40px",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                    }} className="productTitle">{titleText}</div>
                   </div>
                   <span className="priceBadge">{priceText}</span>
                 </div>
-                <button style={{
-                  backgroundColor: PrimaryColor
-                }} className="buyButton">{t("buyNowButton")}</button>
+                <button
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setSelectedProduct(product);
+                  }}
+                  style={{
+                    backgroundColor: PrimaryColor,
+                  }}
+                  className="buyButton"
+                >
+                  {t("buyNowButton")}
+                </button>
               </div>
             </div>
           );
         })}
       </div>
 
+      {selectedProduct && (
+        <div className="modalOverlay" onClick={() => setSelectedProduct(null)}>
+          <div className="modalCard" onClick={(event) => event.stopPropagation()}>
+            <button className="modalClose" onClick={() => setSelectedProduct(null)}>
+              {t("closeButton")}
+            </button>
+            <div className="modalImage">
+              <Image
+                src={selectedProduct.Image ?? selectedProduct.image ?? "/assets/images/image-removebg-preview (21) 1.png"}
+                alt={selectedProduct.Description ?? selectedProduct.description ?? selectedProduct.Tag ?? selectedProduct.tag ?? t("productTagFallback")}
+                fill
+                sizes="(max-width: 640px) 100vw, 480px"
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+            <div className="modalBody">
+              <div className="modalHeader">
+                <span className="productLabel">{tagLabel ?? t("productTagLabel")}</span>
+                <h2>{selectedProduct.Description ?? selectedProduct.description ?? selectedProduct.Tag ?? selectedProduct.tag ?? t("productTagFallback")}</h2>
+              </div>
+              <p className="modalDescription">{selectedProduct.Description ?? selectedProduct.description ?? ""}</p>
+              <div className="modalFooter">
+                <strong>{selectedProduct.Price ?? selectedProduct.price ?? ""}</strong>
+                <button className="buyButton" onClick={() => setSelectedProduct(null)}>{t("buyNowButton")}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <style jsx>{`
         .productsGrid {
           display: grid;
@@ -181,6 +225,81 @@ export default function ProductCollectionCard({
           .productsGrid {
             grid-template-columns: repeat(1, minmax(0, 1fr));
           }
+        }
+
+        .modalOverlay {
+          position: fixed;
+          inset: 0;
+          z-index: 1000;
+          background: rgba(15, 23, 42, 0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 24px;
+        }
+
+        .modalCard {
+          width: min(30%, 900px);
+          max-width: 900px;
+          max-height: 90vh;
+          overflow: auto;
+          background: #ffffff;
+          border-radius: 24px;
+          box-shadow: 0 35px 80px rgba(15, 23, 42, 0.18);
+          position: relative;
+        }
+
+        .modalClose {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          border: none;
+          background: #111827;
+          color: #fff;
+          border-radius: 999px;
+          padding: 10px 14px;
+          cursor: pointer;
+          font-weight: 700;
+        }
+
+        .modalImage {
+          position: relative;
+          min-height: 320px;
+          overflow: hidden;
+        }
+
+        .modalBody {
+          padding: 28px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .modalHeader {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .modalHeader h2 {
+          margin: 0;
+          font-size: 28px;
+          color: #111827;
+          line-height: 1.15;
+        }
+
+        .modalDescription {
+          color: #475569;
+          line-height: 1.8;
+          font-size: 15px;
+        }
+
+        .modalFooter {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 16px;
+          flex-wrap: wrap;
         }
       `}</style>
     </div>

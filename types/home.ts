@@ -4,6 +4,7 @@ export type HeaderActionButtontype={title:string,onClick:()=>void}
 export interface Mobiles {
   Id: number;
   brand: string;
+  Brand:string;
   Description: string;
   Image: string;
   Price: string;
