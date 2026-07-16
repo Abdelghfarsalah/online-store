@@ -25,7 +25,7 @@ export default function SettingBar() {
             height: "100vh",
             background: "#fff",
             boxShadow: "-8px 0 25px rgba(0,0,0,.15)",
-            zIndex: 1000,
+            zIndex: 1001,
             display: state ? "block" : "none",
             padding: "25px",
         }}

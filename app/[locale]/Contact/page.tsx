@@ -26,11 +26,11 @@ export default function ContactPage() {
       <div style={{ maxWidth: 1000, margin: "0 auto", padding: 28, borderRadius: 24, background: "#ffffff", boxShadow: "0 24px 68px rgba(15, 23, 42, 0.08)", display: "grid", gap: 20 }}>
         <div style={{ display: "grid", gap: 16 }}>
           <div>
-            <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>Email</h2>
+            <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>{t("contactLabelEmail")}</h2>
             <p style={{ margin: 8, color: "#475569" }}>support@furniro.com</p>
           </div>
           <div>
-            <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>Phone</h2>
+            <h2 style={{ margin: 0, fontSize: 20, fontWeight: 700 }}>{t("contactLabelPhone")}</h2>
             <p style={{ margin: 8, color: "#475569" }}>+1 (555) 123-4567</p>
           </div>
           <div>

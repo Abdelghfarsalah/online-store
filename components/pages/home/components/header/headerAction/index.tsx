@@ -10,9 +10,9 @@ export default function HeaderAction(){
     <Link href={`/${locale}/Home`}>
       <HeaderActionButton title={t('home')} onClick={()=>{}} />
     </Link>
-    <Link href={`/${locale}/Home`}>
+    {/* <Link href={`/${locale}/Shop`}>
       <HeaderActionButton title={t('shop')} onClick={()=>{}} />
-    </Link>
+    </Link> */}
     <Link href={`/${locale}/About`}>
       <HeaderActionButton title={t('about')} onClick={()=>{}} />
     </Link>

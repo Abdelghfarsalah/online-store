@@ -22,12 +22,10 @@ export default function AboutPage() {
           </button>
         </Link>
       </div>
-
       <div style={{ maxWidth: 1000, margin: "0 auto", padding: 28, borderRadius: 24, background: "#ffffff", boxShadow: "0 24px 68px rgba(15, 23, 42, 0.08)", display: "grid", gap: 20 }}>
         <p style={{ margin: 0, color: "#475569", lineHeight: 1.9, fontSize: 16 }}>{t("aboutSection1")}</p>
         <p style={{ margin: 0, color: "#475569", lineHeight: 1.9, fontSize: 16 }}>{t("aboutSection2")}</p>
       </div>
-      <Footer
     </div>
   );
 }

@@ -1,17 +1,18 @@
 "use client";
 
 import usePrimaryColor from "@/hooks/usePrimaryColor";
-
+import { useTranslations } from "next-intl";
 
 export default function HomeContenTitle() {
-  const {PrimaryColor}=usePrimaryColor();
+  const { PrimaryColor } = usePrimaryColor();
+  const t = useTranslations("HomePage");
   return (
     <div
       style={{
         width: "100%",
         display: "flex",
         justifyContent: "center",
-        margin: "60px 0",
+        margin: "30px 0",
       }}
     >
       <div
@@ -31,9 +32,8 @@ export default function HomeContenTitle() {
             textTransform: "capitalize",
           }}
         >
-          Category
+          {t("categoryTitle")}
         </h2>
-        {}
 
         <div
           style={{
@@ -53,7 +53,7 @@ export default function HomeContenTitle() {
             marginTop: "5px",
           }}
         >
-          Explore our latest collection
+          {t("categorySubtitle")}
         </p>
       </div>
     </div>

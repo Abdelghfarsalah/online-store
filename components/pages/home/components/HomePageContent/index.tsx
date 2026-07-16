@@ -6,8 +6,8 @@ import MobilesSection from "./HomePageContentSections/Mobiles";
 export default function HomePageContent(){
     return <>
     <HomeContenTitle />
-    <MobilesSection />
     <BooksSection />
     <MaleFootwearSection />
+    <MobilesSection />
     </>
 }

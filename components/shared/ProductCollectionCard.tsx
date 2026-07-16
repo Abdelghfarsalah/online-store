@@ -111,9 +111,13 @@ export default function ProductCollectionCard({
             <div className="modalBody">
               <div className="modalHeader">
                 <span className="productLabel">{tagLabel ?? t("productTagLabel")}</span>
-                <h2>{selectedProduct.Description ?? selectedProduct.description ?? selectedProduct.Tag ?? selectedProduct.tag ?? t("productTagFallback")}</h2>
+                <h2>{selectedProduct.Tag ?? selectedProduct.tag ?? selectedProduct.Brand ?? selectedProduct.brand ?? selectedProduct.Description ?? selectedProduct.description ?? t("productTagFallback")}</h2>
               </div>
-              <p className="modalDescription">{selectedProduct.Description ?? selectedProduct.description ?? ""}</p>
+              <p className="modalDescription">
+                {selectedProduct.Description && (selectedProduct.Tag || selectedProduct.Brand)
+                  ? selectedProduct.Description
+                  : selectedProduct.description ?? selectedProduct.Tag ?? selectedProduct.tag ?? ""}
+              </p>
               <div className="modalFooter">
                 <strong>{selectedProduct.Price ?? selectedProduct.price ?? ""}</strong>
                 <button className="buyButton" onClick={() => setSelectedProduct(null)}>{t("buyNowButton")}</button>
