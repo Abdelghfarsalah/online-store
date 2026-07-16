@@ -182,7 +182,7 @@ Frontend Developer specializing in **React.js**, **Next.js**, and modern web app
 Experience the application online:
 
 🔗 **Live Website:**  
-:contentReference[oaicite:0]{index=0}
+[:contentReference[oaicite:0]{index=0}](https://online-store-ncp73uc0o-abdelghfarsalahs-projects.vercel.app/en/login)
 
 You can explore the localized storefront, browse products, and navigate between the English and Arabic versions.
 
