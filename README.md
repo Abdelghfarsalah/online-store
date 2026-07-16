@@ -177,5 +177,13 @@ messages/
 Frontend Developer specializing in **React.js**, **Next.js**, and modern web applications.
 
 ---
+## 🌐 Live Demo
+
+Experience the application online:
+
+🔗 **Live Website:**  
+:contentReference[oaicite:0]{index=0}
+
+You can explore the localized storefront, browse products, and navigate between the English and Arabic versions.
 
 ⭐ If you like this project, consider giving it a **Star** on GitHub.
