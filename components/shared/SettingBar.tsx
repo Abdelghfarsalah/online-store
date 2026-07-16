@@ -6,6 +6,7 @@ import { useLocale } from "next-intl";
 import { IoClose } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import ChangeLangaugeButton from "./ChangeLanguageButton";
+import LogoutButton from "./LogoutButton";
 export default function SettingBar() {
  const locale=useLocale()
     const state = useSelector(
@@ -14,7 +15,7 @@ export default function SettingBar() {
     const dispatch = useDispatch();
 
     return (
-        <div
+    <div
         className="SettingBar"
         style={{
             position: "fixed",
@@ -26,11 +27,13 @@ export default function SettingBar() {
             background: "#fff",
             boxShadow: "-8px 0 25px rgba(0,0,0,.15)",
             zIndex: 1001,
-            display: state ? "block" : "none",
+            display: state ? "flex" : "none",
             padding: "25px",
+            flexDirection:"column"
         }}
         >
-        {/* Header */}
+        <div>
+            {/* Header */}
         <div
             style={{
             display: "flex",
@@ -100,6 +103,10 @@ export default function SettingBar() {
             ))}
         </div>
         <ChangeLangaugeButton></ChangeLangaugeButton>
+        </div>
+        <div style={{ marginTop: "auto" }}>
+  <LogoutButton />
+</div>
     </div>
     );
 }
