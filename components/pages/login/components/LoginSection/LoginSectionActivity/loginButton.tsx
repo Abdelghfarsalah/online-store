@@ -1,7 +1,8 @@
 "use client"
 import { Button } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { SeetingBarType } from "@/types/redux";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useSelector } from "react-redux";
 
 export function LoginButton({onClick}:{onClick:()=>void}) {
@@ -9,7 +10,9 @@ export function LoginButton({onClick}:{onClick:()=>void}) {
     const state = useSelector(
             (state: SeetingBarType) => state.SeetingBar.PrimaryColor
         );
-  return <Button onClick={onClick} style={{
+    const locale=useLocale();
+  return <Link href={`/Home`}>
+  <Button onClick={onClick} style={{
     backgroundColor:state,
     width:"100%",
     height:"60px",
@@ -19,4 +22,5 @@ export function LoginButton({onClick}:{onClick:()=>void}) {
     borderRadius:"10px",
     fontWeight:"bold"
   }}>{t('signInButton')}</Button>
+  </Link>
 }

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { SeetingBarType } from "@/types/redux";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { useSelector } from "react-redux";
 
 export function ForgetPasswordButton({onClick}:{onClick:()=>void}) {
@@ -9,7 +10,7 @@ export function ForgetPasswordButton({onClick}:{onClick:()=>void}) {
       const state = useSelector(
             (state: SeetingBarType) => state.SeetingBar.PrimaryColor
         );
-  return <Button onClick={onClick} style={{
+  return <Link href={`/Home`}><Button onClick={onClick} style={{
     backgroundColor:state,
     width:"100%",
     height:"60px",
@@ -18,5 +19,8 @@ export function ForgetPasswordButton({onClick}:{onClick:()=>void}) {
     color:"white",
     borderRadius:"10px",
     fontWeight:"bold"
-  }}>{t('resetButton')}</Button>
+  }}>{t('resetButton')}</Button> </Link>;
 }
+
+
+
